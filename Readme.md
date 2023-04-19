@@ -5,5 +5,5 @@ A basic bash script to quickly go through the steps of setting up a local reposi
 
 To run the script
 ```bash
-./run.sh <require localRepositoryName> <optional RemoteRepositoryName, if different from local name>
+ bash ./run.sh <require localRepositoryName> <optional RemoteRepositoryName, if different from local name>
 ```
