@@ -1,5 +1,5 @@
 if [ -z $1 ]; then
-    echo 'Provide project name'
+    echo 'Error: Missing Argument: Local Repository Name'
     exit;
 else
     localRepoName=$1
@@ -7,6 +7,8 @@ else
 fi
 
 if [ -z $2 ]; then
+    echo 'WARNING: Missing Argument: Remote Repository Name'
+    echo 'Local repository name will be used for local and remote'
     remoteRepoName=$1
 else
     remoteRepoName=$2
