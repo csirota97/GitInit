@@ -2,6 +2,12 @@ if [ -z $1 ]; then
     echo 'Provide project name'
     exit;
 fi
+if [ ${#GITUSER} -eq 0 ]; then
+    echo 'Missing Github Username!'
+    read -p "Enter Github Username: " GITUSER
+else
+    echo $GITUSER
+fi
 
 echo 'Initializing Project' $1
 string=$1
@@ -14,5 +20,5 @@ pwd
 git init
 git add README.md
 git commit -m 'Initial Commit'
-git remote add origin 'https://github.com/csirota97/'$string'.git'
+git remote add origin 'https://github.com/'$GITUSER'/'$string'.git'
 git push -u origin master
